@@ -139,11 +139,11 @@ void main(void)
       ADC_data[1] = (double)(-5.44e-08 *pow(temp,3)+1.55e-04 *pow(temp,2)-6.04e-03 *temp+0.6688);
       ADC_data[0] = (double)ADC_Val[1]*3.3/4.096;
       //关闭Dset,开始充电
-
+      LED_ON;
   
       //Bus_SendByte((uint8_t*) ADC_data,8);      //由于1个double变量是4字节的 2个double是8字节,等到发送的时候再测试
       Delay_40us(25000);     //25*40为1ms,25000*40是1s
-      patience++; 
+      //patience++; 
     }
     
     /*else if(data[0]==CMD_END)        //这里应该是停止发送，进入休眠，设置好外部中断
