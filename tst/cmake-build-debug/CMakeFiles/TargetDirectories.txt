@@ -1,3 +1,0 @@
-D:/A_Cproj/tst/cmake-build-debug/CMakeFiles/tst.elf.dir
-D:/A_Cproj/tst/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/A_Cproj/tst/cmake-build-debug/CMakeFiles/rebuild_cache.dir
