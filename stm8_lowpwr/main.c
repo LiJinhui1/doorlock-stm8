@@ -8,7 +8,8 @@
 3、实际接收到的电平：长电平120-150        短电平捕捉40-70
 4、测试时间：2021/11/20 多数据发送，多数据接收，单数据发送与接收，ADC转换传送，重复唤醒与传输ADC没问题，
 5、当已经激活发送的时候，由于是1s发送一次，所以发送结束标志的时候尽量在n.5s左右发送
-6、剩余的测试：PVD掉电唤醒
+6、掉电唤醒必须把ultralow power关闭，因为比较电压需要VRef
+7、有关于RTC的设置，必须关闭电源，才能更新配置。即使复位了之后（包括按键复位，烧录复位都无效）
 */
 
 uint16_t ADC_Val[2]={0,0};       //存放ADC转换的数据
@@ -45,7 +46,8 @@ static void PVD_Config(void){
   PWR_PVDCmd(ENABLE);
   PWR_PVDITConfig(ENABLE);
   PWR_FastWakeUpCmd(ENABLE);    //使能快速启动
-  PWR_UltraLowPowerCmd(ENABLE); //使能超低功耗，休眠时VREF关闭
+  //PWR_UltraLowPowerCmd(ENABLE); //使能超低功耗，休眠时VREF关闭,不能开启 否则的话读不出PVD
+  PWR_UltraLowPowerCmd(DISABLE);
 }
 
  /*ADC_Config，但不启动*/
@@ -81,7 +83,7 @@ static void TIM2_Config(void){
 static void RTC_Config(void){
   CLK_PeripheralClockConfig(CLK_Peripheral_RTC,ENABLE);
   CLK_RTCClockConfig(CLK_RTCCLKSource_LSI,CLK_RTCCLKDiv_1);
-  RTC_WakeUpClockConfig(RTC_WakeUpClock_CK_SPRE_16bits );  //理论周期:32.768/38，实际周期0.897s+1
+  RTC_WakeUpClockConfig(RTC_WakeUpClock_CK_SPRE_16bits );  //理论周期:32.768/38，实际周期0.896s
   RTC_ITConfig(RTC_IT_WUT, ENABLE);
   RTC_SetWakeUpCounter(4012);      //0.896s 唤醒一次 1h约（4012+1） 现在测试1+1
   RTC_WakeUpCmd(ENABLE);        //按照3600/0.897得到约4013（4012+1）设置重装值4012

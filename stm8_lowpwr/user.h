@@ -2,8 +2,6 @@
 //定义LED及按键端口
 #define LED_PORT        GPIOD
 #define LED_PINS        GPIO_Pin_0
-#define KEY_PORT        GPIOB
-#define KEY_PINS        GPIO_Pin_1
 #define USART_TX_PORT   GPIOC
 #define USART_TX_PINS   GPIO_Pin_5
 #define USART_RX_PORT   GPIOC

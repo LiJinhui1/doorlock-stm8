@@ -53676,7 +53676,7 @@
     "display": "void ADC_Config(void)",
     "location": {
       "column": "13",
-      "line": "52",
+      "line": "53",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\main.c"
     },
     "name": "ADC_Config",
@@ -53690,7 +53690,7 @@
     "display": "void DMA_Config(void)",
     "location": {
       "column": "13",
-      "line": "64",
+      "line": "65",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\main.c"
     },
     "name": "DMA_Config",
@@ -53704,7 +53704,7 @@
     "display": "void TIM2_Config(void)",
     "location": {
       "column": "13",
-      "line": "72",
+      "line": "73",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\main.c"
     },
     "name": "TIM2_Config",
@@ -53718,7 +53718,7 @@
     "display": "void RTC_Config(void)",
     "location": {
       "column": "13",
-      "line": "81",
+      "line": "82",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\main.c"
     },
     "name": "RTC_Config",
@@ -53732,7 +53732,7 @@
     "display": "void Bus_SendByte(uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "90",
+      "line": "91",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\main.c"
     },
     "name": "Bus_SendByte",
@@ -53740,13 +53740,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3997@F@Bus_SendByte@j",
+    "ID": "c:main.c@4058@F@Bus_SendByte@j",
     "What": "Variable",
     "defdec": "Def",
     "display": "j",
     "location": {
       "column": "15",
-      "line": "93",
+      "line": "94",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\main.c"
     },
     "name": "j",
@@ -53754,13 +53754,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4125@F@Bus_SendByte@i",
+    "ID": "c:main.c@4186@F@Bus_SendByte@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "17",
-      "line": "97",
+      "line": "98",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\main.c"
     },
     "name": "i",
@@ -53774,7 +53774,7 @@
     "display": "double pow(double, uint8_t)",
     "location": {
       "column": "15",
-      "line": "123",
+      "line": "124",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\main.c"
     },
     "name": "pow",
@@ -53782,13 +53782,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4932@F@pow@temp",
+    "ID": "c:main.c@4993@F@pow@temp",
     "What": "Variable",
     "defdec": "Def",
     "display": "temp",
     "location": {
       "column": "10",
-      "line": "124",
+      "line": "125",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\main.c"
     },
     "name": "temp",
@@ -53802,7 +53802,7 @@
     "display": "void main(void)",
     "location": {
       "column": "6",
-      "line": "132",
+      "line": "133",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\main.c"
     },
     "name": "main",
@@ -54772,370 +54772,6 @@
       "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\string.h"
     },
     "name": "strerror",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@533@macro@__INTRINSIC",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__INTRINSIC",
-    "location": {
-      "column": "11",
-      "line": "21",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__INTRINSIC",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@1804@macro@__STM8ABI_PORTABILITY_INTERNAL_LEVEL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__STM8ABI_PORTABILITY_INTERNAL_LEVEL",
-    "location": {
-      "column": "11",
-      "line": "65",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__STM8ABI_PORTABILITY_INTERNAL_LEVEL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@1879@macro@_YCHECK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YCHECK",
-    "location": {
-      "column": "9",
-      "line": "69",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "_YCHECK",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@2491@macro@__EFF_NS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NS",
-    "location": {
-      "column": "9",
-      "line": "84",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@2583@macro@__EFF_NSNW1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NSNW1",
-    "location": {
-      "column": "9",
-      "line": "85",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NSNW1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@2688@macro@__EFF_NE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NE",
-    "location": {
-      "column": "9",
-      "line": "86",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NE",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@2767@macro@__EFF_NENR1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENR1",
-    "location": {
-      "column": "9",
-      "line": "87",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENR1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@2858@macro@__EFF_NENR1R1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENR1R1",
-    "location": {
-      "column": "9",
-      "line": "88",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENR1R1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@2960@macro@__EFF_NENR2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENR2",
-    "location": {
-      "column": "9",
-      "line": "89",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENR2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3051@macro@__EFF_NENR1NW2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENR1NW2",
-    "location": {
-      "column": "9",
-      "line": "90",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENR1NW2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3155@macro@__EFF_NENR1NW2R1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENR1NW2R1",
-    "location": {
-      "column": "9",
-      "line": "91",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENR1NW2R1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3272@macro@__EFF_NENW1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENW1",
-    "location": {
-      "column": "9",
-      "line": "92",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENW1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3364@macro@__EFF_NENW2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENW2",
-    "location": {
-      "column": "9",
-      "line": "93",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENW2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3456@macro@__EFF_NENW2R1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENW2R1",
-    "location": {
-      "column": "9",
-      "line": "94",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENW2R1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3559@macro@__EFF_NENW1NW2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENW1NW2",
-    "location": {
-      "column": "9",
-      "line": "95",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENW1NW2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3653@macro@__EFF_NR1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NR1",
-    "location": {
-      "column": "9",
-      "line": "96",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NR1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3734@macro@__EFF_NR1NW2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NR1NW2",
-    "location": {
-      "column": "9",
-      "line": "97",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NR1NW2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3828@macro@__EFF_NR1NW3",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NR1NW3",
-    "location": {
-      "column": "9",
-      "line": "98",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NR1NW3",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3922@macro@__EFF_NW1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NW1",
-    "location": {
-      "column": "9",
-      "line": "99",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NW1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4004@macro@__EFF_NW2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NW2",
-    "location": {
-      "column": "9",
-      "line": "100",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NW2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4086@macro@__EFF_NW1NR2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NW1NR2",
-    "location": {
-      "column": "9",
-      "line": "101",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NW1NR2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4180@macro@__EFF_NW1NW2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NW1NW2",
-    "location": {
-      "column": "9",
-      "line": "102",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NW1NW2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4272@macro@__ATTRIBUTES",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__ATTRIBUTES",
-    "location": {
-      "column": "9",
-      "line": "107",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__ATTRIBUTES",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4329@macro@__ATTRIBUTES_CAN_THROW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__ATTRIBUTES_CAN_THROW",
-    "location": {
-      "column": "9",
-      "line": "108",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__ATTRIBUTES_CAN_THROW",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4376@macro@__ATTRIBUTES_NORETURN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__ATTRIBUTES_NORETURN",
-    "location": {
-      "column": "9",
-      "line": "109",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__ATTRIBUTES_NORETURN",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4444@macro@__ATTRIBUTES_NORETURN_CAN_THROW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__ATTRIBUTES_NORETURN_CAN_THROW",
-    "location": {
-      "column": "9",
-      "line": "110",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__ATTRIBUTES_NORETURN_CAN_THROW",
     "origin": "system_include",
     "scope": null
   },
@@ -57442,41 +57078,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@119@macro@KEY_PORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEY_PORT",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
-    },
-    "name": "KEY_PORT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:user.h@150@macro@KEY_PINS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEY_PINS",
-    "location": {
-      "column": "9",
-      "line": "6",
-      "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
-    },
-    "name": "KEY_PINS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:user.h@186@macro@USART_TX_PORT",
+    "ID": "c:user.h@119@macro@USART_TX_PORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "USART_TX_PORT",
     "location": {
       "column": "9",
-      "line": "7",
+      "line": "5",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "USART_TX_PORT",
@@ -57484,13 +57092,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@217@macro@USART_TX_PINS",
+    "ID": "c:user.h@150@macro@USART_TX_PINS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "USART_TX_PINS",
     "location": {
       "column": "9",
-      "line": "8",
+      "line": "6",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "USART_TX_PINS",
@@ -57498,13 +57106,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@253@macro@USART_RX_PORT",
+    "ID": "c:user.h@186@macro@USART_RX_PORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "USART_RX_PORT",
     "location": {
       "column": "9",
-      "line": "9",
+      "line": "7",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "USART_RX_PORT",
@@ -57512,13 +57120,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@284@macro@USART_RX_PINS",
+    "ID": "c:user.h@217@macro@USART_RX_PINS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "USART_RX_PINS",
     "location": {
       "column": "9",
-      "line": "10",
+      "line": "8",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "USART_RX_PINS",
@@ -57526,13 +57134,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@320@macro@ADC_1PORT",
+    "ID": "c:user.h@253@macro@ADC_1PORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "ADC_1PORT",
     "location": {
       "column": "9",
-      "line": "11",
+      "line": "9",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "ADC_1PORT",
@@ -57540,13 +57148,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@351@macro@ADC_1PINS",
+    "ID": "c:user.h@284@macro@ADC_1PINS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "ADC_1PINS",
     "location": {
       "column": "9",
-      "line": "12",
+      "line": "10",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "ADC_1PINS",
@@ -57554,13 +57162,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@387@macro@ADC_2PORT",
+    "ID": "c:user.h@320@macro@ADC_2PORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "ADC_2PORT",
     "location": {
       "column": "9",
-      "line": "13",
+      "line": "11",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "ADC_2PORT",
@@ -57568,13 +57176,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@418@macro@ADC_2PINS",
+    "ID": "c:user.h@351@macro@ADC_2PINS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "ADC_2PINS",
     "location": {
       "column": "9",
-      "line": "14",
+      "line": "12",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "ADC_2PINS",
@@ -57582,13 +57190,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@454@macro@DSET_PORT",
+    "ID": "c:user.h@387@macro@DSET_PORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DSET_PORT",
     "location": {
       "column": "9",
-      "line": "15",
+      "line": "13",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "DSET_PORT",
@@ -57596,13 +57204,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@485@macro@DSET_PINS",
+    "ID": "c:user.h@418@macro@DSET_PINS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DSET_PINS",
     "location": {
       "column": "9",
-      "line": "16",
+      "line": "14",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "DSET_PINS",
@@ -57610,13 +57218,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@521@macro@LOCATE_CTR_PORT",
+    "ID": "c:user.h@454@macro@LOCATE_CTR_PORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "LOCATE_CTR_PORT",
     "location": {
       "column": "9",
-      "line": "17",
+      "line": "15",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "LOCATE_CTR_PORT",
@@ -57624,13 +57232,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@552@macro@LOCATE_CTR_PINS",
+    "ID": "c:user.h@485@macro@LOCATE_CTR_PINS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "LOCATE_CTR_PINS",
     "location": {
       "column": "9",
-      "line": "18",
+      "line": "16",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "LOCATE_CTR_PINS",
@@ -57638,13 +57246,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@588@macro@MEASURE_ON",
+    "ID": "c:user.h@521@macro@MEASURE_ON",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "MEASURE_ON",
     "location": {
       "column": "9",
-      "line": "19",
+      "line": "17",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "MEASURE_ON",
@@ -57652,13 +57260,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@647@macro@MEASURE_OFF",
+    "ID": "c:user.h@580@macro@MEASURE_OFF",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "MEASURE_OFF",
     "location": {
       "column": "9",
-      "line": "20",
+      "line": "18",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "MEASURE_OFF",
@@ -57666,13 +57274,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@708@macro@PUTCHAR_PROTOTYPE",
+    "ID": "c:user.h@641@macro@PUTCHAR_PROTOTYPE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PUTCHAR_PROTOTYPE",
     "location": {
       "column": "9",
-      "line": "21",
+      "line": "19",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "PUTCHAR_PROTOTYPE",
@@ -57680,13 +57288,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@755@macro@LED_TOGGLE",
+    "ID": "c:user.h@688@macro@LED_TOGGLE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "LED_TOGGLE",
     "location": {
       "column": "9",
-      "line": "22",
+      "line": "20",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "LED_TOGGLE",
@@ -57694,13 +57302,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@815@macro@LED_OFF",
+    "ID": "c:user.h@748@macro@LED_OFF",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "LED_OFF",
     "location": {
       "column": "9",
-      "line": "23",
+      "line": "21",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "LED_OFF",
@@ -57708,13 +57316,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@872@macro@LED_ON",
+    "ID": "c:user.h@805@macro@LED_ON",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "LED_ON",
     "location": {
       "column": "9",
-      "line": "24",
+      "line": "22",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "LED_ON",
@@ -57722,13 +57330,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@931@macro@MAX_DELAY",
+    "ID": "c:user.h@864@macro@MAX_DELAY",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "MAX_DELAY",
     "location": {
       "column": "9",
-      "line": "25",
+      "line": "23",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "MAX_DELAY",
@@ -57736,13 +57344,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@964@macro@SINGLEBUS_PORT",
+    "ID": "c:user.h@897@macro@SINGLEBUS_PORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "SINGLEBUS_PORT",
     "location": {
       "column": "9",
-      "line": "26",
+      "line": "24",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "SINGLEBUS_PORT",
@@ -57750,13 +57358,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@1000@macro@SINGLEBUS_PINS",
+    "ID": "c:user.h@933@macro@SINGLEBUS_PINS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "SINGLEBUS_PINS",
     "location": {
       "column": "9",
-      "line": "27",
+      "line": "25",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "SINGLEBUS_PINS",
@@ -57764,13 +57372,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@1041@macro@PRESTART_EDGE",
+    "ID": "c:user.h@974@macro@PRESTART_EDGE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PRESTART_EDGE",
     "location": {
       "column": "9",
-      "line": "28",
+      "line": "26",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "PRESTART_EDGE",
@@ -57778,13 +57386,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@1109@macro@REC_MAXSIZE",
+    "ID": "c:user.h@1042@macro@REC_MAXSIZE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "REC_MAXSIZE",
     "location": {
       "column": "9",
-      "line": "31",
+      "line": "29",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "REC_MAXSIZE",
@@ -57792,13 +57400,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@1172@macro@CMD_START",
+    "ID": "c:user.h@1105@macro@CMD_START",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "CMD_START",
     "location": {
       "column": "9",
-      "line": "32",
+      "line": "30",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "CMD_START",
@@ -57806,13 +57414,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@1207@macro@CMD_END",
+    "ID": "c:user.h@1140@macro@CMD_END",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "CMD_END",
     "location": {
       "column": "9",
-      "line": "33",
+      "line": "31",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "CMD_END",
@@ -57820,13 +57428,13 @@
     "scope": null
   },
   {
-    "ID": "c:user.h@1242@macro@CMD_LWPWR_FLAG",
+    "ID": "c:user.h@1175@macro@CMD_LWPWR_FLAG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "CMD_LWPWR_FLAG",
     "location": {
       "column": "9",
-      "line": "34",
+      "line": "32",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "CMD_LWPWR_FLAG",
@@ -57840,7 +57448,7 @@
     "display": "Single_Bus_Struct",
     "location": {
       "column": "16",
-      "line": "35",
+      "line": "33",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "members": [
@@ -57851,7 +57459,7 @@
         "display": "pre_start",
         "location": {
           "column": "8",
-          "line": "36",
+          "line": "34",
           "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
         },
         "name": "pre_start",
@@ -57865,7 +57473,7 @@
         "display": "start_flag",
         "location": {
           "column": "8",
-          "line": "37",
+          "line": "35",
           "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
         },
         "name": "start_flag",
@@ -57879,7 +57487,7 @@
         "display": "high_time",
         "location": {
           "column": "12",
-          "line": "38",
+          "line": "36",
           "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
         },
         "name": "high_time",
@@ -57893,7 +57501,7 @@
         "display": "low_time",
         "location": {
           "column": "12",
-          "line": "39",
+          "line": "37",
           "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
         },
         "name": "low_time",
@@ -57907,7 +57515,7 @@
         "display": "count",
         "location": {
           "column": "11",
-          "line": "40",
+          "line": "38",
           "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
         },
         "name": "count",
@@ -57921,7 +57529,7 @@
         "display": "datasum",
         "location": {
           "column": "11",
-          "line": "41",
+          "line": "39",
           "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
         },
         "name": "datasum",
@@ -57935,7 +57543,7 @@
         "display": "struct Single_Bus_Struct",
         "location": {
           "column": "3",
-          "line": "42",
+          "line": "40",
           "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
         },
         "name": "bus_struct",
@@ -57954,7 +57562,7 @@
     "display": "tick",
     "location": {
       "column": "17",
-      "line": "44",
+      "line": "42",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "tick",
@@ -57968,7 +57576,7 @@
     "display": "tick",
     "location": {
       "column": "17",
-      "line": "44",
+      "line": "42",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "tick",
@@ -57982,7 +57590,7 @@
     "display": "s_bus",
     "location": {
       "column": "19",
-      "line": "45",
+      "line": "43",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "s_bus",
@@ -57996,7 +57604,7 @@
     "display": "s_bus",
     "location": {
       "column": "19",
-      "line": "45",
+      "line": "43",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "s_bus",
@@ -58010,7 +57618,7 @@
     "display": "rec_data",
     "location": {
       "column": "16",
-      "line": "46",
+      "line": "44",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "rec_data",
@@ -58024,7 +57632,7 @@
     "display": "rec_data",
     "location": {
       "column": "16",
-      "line": "46",
+      "line": "44",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "rec_data",
@@ -58038,7 +57646,7 @@
     "display": "test_count",
     "location": {
       "column": "16",
-      "line": "47",
+      "line": "45",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "test_count",
@@ -58052,7 +57660,7 @@
     "display": "test_count",
     "location": {
       "column": "16",
-      "line": "47",
+      "line": "45",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "test_count",
@@ -58066,7 +57674,7 @@
     "display": "record",
     "location": {
       "column": "17",
-      "line": "48",
+      "line": "46",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "record",
@@ -58080,7 +57688,7 @@
     "display": "record",
     "location": {
       "column": "17",
-      "line": "48",
+      "line": "46",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "record",
@@ -58094,7 +57702,7 @@
     "display": "ADC_data",
     "location": {
       "column": "15",
-      "line": "49",
+      "line": "47",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "ADC_data",
@@ -58108,7 +57716,7 @@
     "display": "ADC_data",
     "location": {
       "column": "15",
-      "line": "49",
+      "line": "47",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "ADC_data",
@@ -58122,7 +57730,7 @@
     "display": "RTC_AWK_flag",
     "location": {
       "column": "13",
-      "line": "50",
+      "line": "48",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "RTC_AWK_flag",
@@ -58136,7 +57744,7 @@
     "display": "RTC_AWK_flag",
     "location": {
       "column": "13",
-      "line": "50",
+      "line": "48",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "RTC_AWK_flag",
@@ -58150,7 +57758,7 @@
     "display": "PVD_flag",
     "location": {
       "column": "13",
-      "line": "51",
+      "line": "49",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "PVD_flag",
@@ -58164,7 +57772,7 @@
     "display": "PVD_flag",
     "location": {
       "column": "13",
-      "line": "51",
+      "line": "49",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "PVD_flag",
@@ -58178,7 +57786,7 @@
     "display": "ext_flag",
     "location": {
       "column": "13",
-      "line": "52",
+      "line": "50",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "ext_flag",
@@ -58192,7 +57800,7 @@
     "display": "ext_flag",
     "location": {
       "column": "13",
-      "line": "52",
+      "line": "50",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "ext_flag",
@@ -58206,7 +57814,7 @@
     "display": "void Bus_SendByte(uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "54",
+      "line": "52",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "Bus_SendByte",
@@ -58220,7 +57828,7 @@
     "display": "void Bus_SendByte(uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "54",
+      "line": "52",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "Bus_SendByte",
@@ -58234,7 +57842,7 @@
     "display": "void TIM3_Config(void)",
     "location": {
       "column": "6",
-      "line": "55",
+      "line": "53",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "TIM3_Config",
@@ -58248,7 +57856,7 @@
     "display": "void TIM3_Config(void)",
     "location": {
       "column": "6",
-      "line": "55",
+      "line": "53",
       "path": "F:\\1workspace\\stm8_lowpwr\\stm8_lowpwr\\user.h"
     },
     "name": "TIM3_Config",
@@ -59446,86 +59054,464 @@
     "scope": null
   },
   {
-    "ID": "c:xencoding_limits.h@130@macro@_XENCODING_LIMITS_H",
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_XENCODING_LIMITS_H",
+    "display": "_YSIZET_H",
     "location": {
       "column": "9",
       "line": "5",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\xencoding_limits.h"
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
     },
-    "name": "_XENCODING_LIMITS_H",
+    "name": "_YSIZET_H",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:xencoding_limits.h@329@macro@_EncodingSb_LenMax",
+    "ID": "c:ysizet.h@333@macro@_SIZE_T",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_EncodingSb_LenMax",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@352@macro@_SIZET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZET",
+    "location": {
+      "column": "11",
+      "line": "18",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZET",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@370@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "19",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "16",
+      "line": "20",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@475@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
     "location": {
       "column": "9",
-      "line": "15",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\xencoding_limits.h"
+      "line": "23",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
     },
-    "name": "_EncodingSb_LenMax",
+    "name": "__DATA_PTR_MEM_HELPER1__",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:xencoding_limits.h@461@macro@_EncodingUtf8_LenMax",
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "25",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@533@macro@__INTRINSIC",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_EncodingUtf8_LenMax",
+    "display": "__INTRINSIC",
     "location": {
       "column": "11",
-      "line": "20",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\xencoding_limits.h"
+      "line": "21",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
     },
-    "name": "_EncodingUtf8_LenMax",
+    "name": "__INTRINSIC",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:xencoding_limits.h@1097@macro@_ENCODING_WITH_USED",
+    "ID": "c:ycheck.h@1804@macro@__STM8ABI_PORTABILITY_INTERNAL_LEVEL",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_ENCODING_WITH_USED",
-    "location": {
-      "column": "13",
-      "line": "47",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\xencoding_limits.h"
-    },
-    "name": "_ENCODING_WITH_USED",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:xencoding_limits.h@1161@macro@_ENCODING_LEN_MAX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_ENCODING_LEN_MAX",
+    "display": "__STM8ABI_PORTABILITY_INTERNAL_LEVEL",
     "location": {
       "column": "11",
-      "line": "51",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\xencoding_limits.h"
+      "line": "65",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
     },
-    "name": "_ENCODING_LEN_MAX",
+    "name": "__STM8ABI_PORTABILITY_INTERNAL_LEVEL",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:xencoding_limits.h@1218@macro@_ENCODING_CUR_MAX",
+    "ID": "c:ycheck.h@1879@macro@_YCHECK",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_ENCODING_CUR_MAX",
+    "display": "_YCHECK",
     "location": {
-      "column": "11",
-      "line": "52",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\xencoding_limits.h"
+      "column": "9",
+      "line": "69",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
     },
-    "name": "_ENCODING_CUR_MAX",
+    "name": "_YCHECK",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@2491@macro@__EFF_NS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NS",
+    "location": {
+      "column": "9",
+      "line": "84",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NS",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@2583@macro@__EFF_NSNW1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NSNW1",
+    "location": {
+      "column": "9",
+      "line": "85",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NSNW1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@2688@macro@__EFF_NE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NE",
+    "location": {
+      "column": "9",
+      "line": "86",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NE",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@2767@macro@__EFF_NENR1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENR1",
+    "location": {
+      "column": "9",
+      "line": "87",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENR1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@2858@macro@__EFF_NENR1R1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENR1R1",
+    "location": {
+      "column": "9",
+      "line": "88",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENR1R1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@2960@macro@__EFF_NENR2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENR2",
+    "location": {
+      "column": "9",
+      "line": "89",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENR2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3051@macro@__EFF_NENR1NW2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENR1NW2",
+    "location": {
+      "column": "9",
+      "line": "90",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENR1NW2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3155@macro@__EFF_NENR1NW2R1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENR1NW2R1",
+    "location": {
+      "column": "9",
+      "line": "91",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENR1NW2R1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3272@macro@__EFF_NENW1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENW1",
+    "location": {
+      "column": "9",
+      "line": "92",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENW1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3364@macro@__EFF_NENW2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENW2",
+    "location": {
+      "column": "9",
+      "line": "93",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENW2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3456@macro@__EFF_NENW2R1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENW2R1",
+    "location": {
+      "column": "9",
+      "line": "94",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENW2R1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3559@macro@__EFF_NENW1NW2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENW1NW2",
+    "location": {
+      "column": "9",
+      "line": "95",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENW1NW2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3653@macro@__EFF_NR1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NR1",
+    "location": {
+      "column": "9",
+      "line": "96",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NR1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3734@macro@__EFF_NR1NW2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NR1NW2",
+    "location": {
+      "column": "9",
+      "line": "97",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NR1NW2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3828@macro@__EFF_NR1NW3",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NR1NW3",
+    "location": {
+      "column": "9",
+      "line": "98",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NR1NW3",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3922@macro@__EFF_NW1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NW1",
+    "location": {
+      "column": "9",
+      "line": "99",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NW1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4004@macro@__EFF_NW2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NW2",
+    "location": {
+      "column": "9",
+      "line": "100",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NW2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4086@macro@__EFF_NW1NR2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NW1NR2",
+    "location": {
+      "column": "9",
+      "line": "101",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NW1NR2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4180@macro@__EFF_NW1NW2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NW1NW2",
+    "location": {
+      "column": "9",
+      "line": "102",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NW1NW2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4272@macro@__ATTRIBUTES",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__ATTRIBUTES",
+    "location": {
+      "column": "9",
+      "line": "107",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__ATTRIBUTES",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4329@macro@__ATTRIBUTES_CAN_THROW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__ATTRIBUTES_CAN_THROW",
+    "location": {
+      "column": "9",
+      "line": "108",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__ATTRIBUTES_CAN_THROW",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4376@macro@__ATTRIBUTES_NORETURN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__ATTRIBUTES_NORETURN",
+    "location": {
+      "column": "9",
+      "line": "109",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__ATTRIBUTES_NORETURN",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4444@macro@__ATTRIBUTES_NORETURN_CAN_THROW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__ATTRIBUTES_NORETURN_CAN_THROW",
+    "location": {
+      "column": "9",
+      "line": "110",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__ATTRIBUTES_NORETURN_CAN_THROW",
     "origin": "system_include",
     "scope": null
   },
@@ -59698,104 +59684,6 @@
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "_YSIZET_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@333@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "17",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@352@macro@_SIZET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZET",
-    "location": {
-      "column": "11",
-      "line": "18",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZET",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@370@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "19",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "16",
-      "line": "20",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@475@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
-    "location": {
-      "column": "9",
-      "line": "23",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "25",
-      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:DLib_Product.h@161@macro@_DLIB_PRODUCT_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -59890,6 +59778,90 @@
       "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\DLib_Product.h"
     },
     "name": "_TLS_CONST_DEFINITION",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:xencoding_limits.h@130@macro@_XENCODING_LIMITS_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_XENCODING_LIMITS_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\xencoding_limits.h"
+    },
+    "name": "_XENCODING_LIMITS_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:xencoding_limits.h@329@macro@_EncodingSb_LenMax",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_EncodingSb_LenMax",
+    "location": {
+      "column": "9",
+      "line": "15",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\xencoding_limits.h"
+    },
+    "name": "_EncodingSb_LenMax",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:xencoding_limits.h@461@macro@_EncodingUtf8_LenMax",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_EncodingUtf8_LenMax",
+    "location": {
+      "column": "11",
+      "line": "20",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\xencoding_limits.h"
+    },
+    "name": "_EncodingUtf8_LenMax",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:xencoding_limits.h@1097@macro@_ENCODING_WITH_USED",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_ENCODING_WITH_USED",
+    "location": {
+      "column": "13",
+      "line": "47",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\xencoding_limits.h"
+    },
+    "name": "_ENCODING_WITH_USED",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:xencoding_limits.h@1161@macro@_ENCODING_LEN_MAX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_ENCODING_LEN_MAX",
+    "location": {
+      "column": "11",
+      "line": "51",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\xencoding_limits.h"
+    },
+    "name": "_ENCODING_LEN_MAX",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:xencoding_limits.h@1218@macro@_ENCODING_CUR_MAX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_ENCODING_CUR_MAX",
+    "location": {
+      "column": "11",
+      "line": "52",
+      "path": "F:\\IAR_for_stm8\\stm8\\inc\\c\\xencoding_limits.h"
+    },
+    "name": "_ENCODING_CUR_MAX",
     "origin": "system_include",
     "scope": null
   },
