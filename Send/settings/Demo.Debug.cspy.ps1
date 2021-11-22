@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "F:\IAR_for_stm8\common\bin\cspybat" -f "F:\C++\stm8_measure\stm8l051\051eg\6.Send\settings\Demo.Debug.general.xcl" --backend -f "F:\C++\stm8_measure\stm8l051\051eg\6.Send\settings\Demo.Debug.driver.xcl" 
+& "F:\IAR_for_stm8\common\bin\cspybat" -f "F:\1workspace\stm8_lowpwr\Send\settings\Demo.Debug.general.xcl" --backend -f "F:\1workspace\stm8_lowpwr\Send\settings\Demo.Debug.driver.xcl" 
 }
 else
 {
-& "F:\IAR_for_stm8\common\bin\cspybat" -f "F:\C++\stm8_measure\stm8l051\051eg\6.Send\settings\Demo.Debug.general.xcl" --debug_file=$debugfile --backend -f "F:\C++\stm8_measure\stm8l051\051eg\6.Send\settings\Demo.Debug.driver.xcl" 
+& "F:\IAR_for_stm8\common\bin\cspybat" -f "F:\1workspace\stm8_lowpwr\Send\settings\Demo.Debug.general.xcl" --debug_file=$debugfile --backend -f "F:\1workspace\stm8_lowpwr\Send\settings\Demo.Debug.driver.xcl" 
 }

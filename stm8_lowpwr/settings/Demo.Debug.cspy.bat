@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"F:\IAR_for_stm8\common\bin\cspybat" -f "F:\C++\stm8_measure\stm8l051\051eg\6.USART\settings\Demo.Debug.general.xcl" --backend -f "F:\C++\stm8_measure\stm8l051\051eg\6.USART\settings\Demo.Debug.driver.xcl" 
+"F:\IAR_for_stm8\common\bin\cspybat" -f "F:\1workspace\stm8_lowpwr\stm8_lowpwr\settings\Demo.Debug.general.xcl" --backend -f "F:\1workspace\stm8_lowpwr\stm8_lowpwr\settings\Demo.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"F:\IAR_for_stm8\common\bin\cspybat" -f "F:\C++\stm8_measure\stm8l051\051eg\6.USART\settings\Demo.Debug.general.xcl" "--debug_file=%~1" --backend -f "F:\C++\stm8_measure\stm8l051\051eg\6.USART\settings\Demo.Debug.driver.xcl" 
+"F:\IAR_for_stm8\common\bin\cspybat" -f "F:\1workspace\stm8_lowpwr\stm8_lowpwr\settings\Demo.Debug.general.xcl" "--debug_file=%~1" --backend -f "F:\1workspace\stm8_lowpwr\stm8_lowpwr\settings\Demo.Debug.driver.xcl" 
 
 @echo off 
 :end

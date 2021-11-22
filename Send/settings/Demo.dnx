@@ -35,7 +35,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>2346621742</Checksum>
+        <Checksum>2364877932</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -48,6 +48,9 @@
         <LogFile>_ ""</LogFile>
         <Category>_ 0</Category>
     </Log_file>
+    <array_types>
+        <Fmt0>uint8_t[24]	1	0</Fmt0>
+    </array_types>
     <DataSample>
         <LogEnabled>0</LogEnabled>
         <GraphEnabled>0</GraphEnabled>

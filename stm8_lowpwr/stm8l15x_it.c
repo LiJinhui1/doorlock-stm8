@@ -41,8 +41,10 @@
 extern uint16_t ADC_Val[2];
 extern double ADC_mW;
 extern double ADC_mV2;
-uint8_t lpwrflg = CMD_LWPWR_FLAG;
+uint16_t tick=0;
 bool ext_flag=0;
+bool RTC_AWK_flag=0;
+bool PVD_flag=0;
 /* Private function prototypes -----------------------------------------------*/
 
 
@@ -100,7 +102,6 @@ INTERRUPT_HANDLER(DMA1_CHANNEL0_1_IRQHandler,2)
        it is recommended to set a breakpoint on the following instruction.
     */
 
-  DMA_ClearITPendingBit(DMA1_IT_TC0);
 }
 /**
   * @brief DMA1 channel2 and channel3 Interrupt routine.
@@ -123,6 +124,9 @@ INTERRUPT_HANDLER(RTC_CSSLSE_IRQHandler,4)
     /* In order to detect unexpected events during development,
        it is recommended to set a breakpoint on the following instruction.
     */
+      //Bus_SendByte(uint8_t* sendbuf,uint8_t size);
+  RTC_AWK_flag |= 1;
+  RTC_ClearITPendingBit(RTC_IT_WUT);
 }
 /**
   * @brief External IT PORTE/F and PVD Interrupt routine.
@@ -137,8 +141,7 @@ INTERRUPT_HANDLER(EXTIE_F_PVD_IRQHandler,5)
   if (PWR_GetFlagStatus(PWR_FLAG_PVDOF) != RESET)//捕获到电压小于3.05V了
   {
     //唤醒，发送信号
-    EXTI_DeInit();
-    Bus_SendByte(&lpwrflg,1);  //发送低电量信号，之后就进行while的主函数了
+    PVD_flag |= 1;
     PWR_PVDClearITPendingBit();
   }
   
@@ -369,7 +372,7 @@ INTERRUPT_HANDLER(TIM3_CC_USART3_RX_IRQHandler,22)
     */
   if(TIM3_GetITStatus(TIM3_IT_CC1)!=RESET)
   {
-    if(test_count<70) record[test_count++] = TIM3_GetCapture1();  //记录前30个数据
+    if(test_count<70) record[test_count++] = TIM3_GetCapture1();  //记录前70个数据
     if(TIM3->CCER1>>1 & 1)                                             //如果当前是下降沿触发(第2位是1) CC2P:00100000
     {
       
@@ -382,7 +385,7 @@ INTERRUPT_HANDLER(TIM3_CC_USART3_RX_IRQHandler,22)
       else if(s_bus.pre_start && s_bus.start_flag)        //状态2：当前是进入了传输过程
       {
         s_bus.high_time=TIM3_GetCapture1();     //取出捕获寄存器的值
-        if(s_bus.high_time>40 && s_bus.high_time<200)//判断当前的高电平时间是否正常,不正常就重置80  160
+        if(s_bus.high_time>40 && s_bus.high_time<150)//判断当前的高电平时间是否正常,不正常就重置80  160
         {
           TIM3->CCER1 &= (uint8_t)(~TIM_CCER1_CC1P);    //设置上升沿触发
           //并且入数据
@@ -400,8 +403,8 @@ INTERRUPT_HANDLER(TIM3_CC_USART3_RX_IRQHandler,22)
     }
      else                                                       //当前是上升沿触发
     {      
-      
-      s_bus.low_time=TIM3_GetCapture1();                   //记录当前的时间戳   
+      s_bus.low_time=TIM3_GetCapture1();                   //记录当前的时间戳
+
       if(s_bus.pre_start && (!s_bus.start_flag))              //A已经有下降沿但是这是第一个上升沿，就是等待4ms的时候来了一个上升沿
       {
         if(s_bus.low_time< 3600 || s_bus.low_time>4400)                                            //a 如果当前的低电平时间小于3800us （大于4400就溢出了），溢出时标志位就全部置0
@@ -416,23 +419,35 @@ INTERRUPT_HANDLER(TIM3_CC_USART3_RX_IRQHandler,22)
       }
       else if(s_bus.start_flag && s_bus.pre_start)        //B判断当前状态  现在是进入传输过程了 
       {
-        
-        if(s_bus.high_time<120 && s_bus.high_time>40&&s_bus.low_time<200 && s_bus.low_time>120)           //判断电平时间 区间最大化80和160 40的允许误差
+        if(s_bus.high_time<75 && s_bus.high_time>35&&s_bus.low_time<155 && s_bus.low_time>115)           //判断电平时间 一般在40-70 120-150
         {
-          data[s_bus.datasum] &= (uint8_t)~(1<<s_bus.count);     //第count位变为0
+          rec_data[s_bus.datasum] &= (uint8_t)~(1<<s_bus.count);     //第count位变为0
           s_bus.count++;
-          if(s_bus.count==8){s_bus.count=0; s_bus.datasum++;}
+          if(s_bus.count==8)
+          {
+            if(rec_data[0]==CMD_START) s_bus.datasum=1;         //如果接收到了开始信号，那么就对rec_data[1]进行操作
+            s_bus.count=0; 
+            s_bus.pre_start&=0;
+            s_bus.start_flag&=0;
+          }   //当接收到开始数据时，后来的数据都存到下一个位置
         }
-        else if(s_bus.high_time>120 && s_bus.high_time<200 && s_bus.low_time<120 && s_bus.low_time>40)      //b高电平在140us以上，低电平在100us以下 入1
+        else if(s_bus.high_time>115 && s_bus.high_time<155 && s_bus.low_time<75 && s_bus.low_time>35)      //b高电平在140us以上，低电平在100us以下 入1
         {
-          data[s_bus.datasum] |= (uint8_t)1<<s_bus.count;        //第count位置1
+          rec_data[s_bus.datasum] |= (uint8_t)1<<s_bus.count;        //第count位置1
           s_bus.count++;
-          if(s_bus.count==8){s_bus.count=0; s_bus.datasum++;}
+          if(s_bus.count==8)
+          {
+            if(rec_data[0]==CMD_START) s_bus.datasum=1;         //如果接收到了开始信号，那么就对rec_data[1]进行操作
+            s_bus.count=0;
+            s_bus.pre_start&=0;
+            s_bus.start_flag&=0;
+          }   //当接收到开始数据时，后来的数据都存到下一个位置
         }
         else                                                    //c其他情况 恢复默认状态
         {
           s_bus.pre_start &= 0;
           s_bus.start_flag &= 0;
+          s_bus.count=0;
         }
       }
     TIM3->CCER1 |= TIM_CCER1_CC1P;     //修改当前为下降沿

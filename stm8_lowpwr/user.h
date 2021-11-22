@@ -14,6 +14,8 @@
 #define ADC_2PINS       GPIO_Pin_0
 #define DSET_PORT       GPIOB
 #define DSET_PINS       GPIO_Pin_3
+#define LOCATE_CTR_PORT GPIOB
+#define LOCATE_CTR_PINS GPIO_Pin_4
 #define MEASURE_ON      GPIO_SetBits(DSET_PORT,DSET_PINS)
 #define MEASURE_OFF     GPIO_ResetBits(DSET_PORT,DSET_PINS)
 #define PUTCHAR_PROTOTYPE int putchar (int c)
@@ -26,7 +28,7 @@
 #define PRESTART_EDGE        0x112F     //溢出中断在(4399+1)us
 
 
-#define MAXSIZE              10           //最大可以存10个字节
+#define REC_MAXSIZE          2           //最大可以存10个字节
 #define CMD_START            0xB3
 #define CMD_END              0xB4
 #define CMD_LWPWR_FLAG       0xB5
@@ -41,10 +43,13 @@ typedef struct Single_Bus_Struct{
 
 extern uint16_t tick;
 extern bus_struct s_bus;
-extern uint8_t data[MAXSIZE];
+extern uint8_t rec_data[REC_MAXSIZE];
 extern uint8_t test_count;
 extern uint16_t record[70];
 extern double ADC_data[2];
+extern bool RTC_AWK_flag;
+extern bool PVD_flag;
+extern bool ext_flag;
 
 void Bus_SendByte(uint8_t* sendbuf,uint8_t size);
 void TIM3_Config(void);
