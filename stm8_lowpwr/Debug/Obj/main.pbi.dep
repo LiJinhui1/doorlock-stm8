@@ -1,19 +1,16 @@
-main.pbi: F:\1workspace\stm8_lowpwr\stm8_lowpwr\main.c \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr/stm8l15x_conf.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\stm8l15x_conf.h \
-  F:\IAR_for_stm8\stm8\inc\c\intrinsics.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_adc.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc/stm8l15x.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_clk.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_dma.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_exti.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_gpio.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_pwr.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_rtc.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_syscfg.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_tim2.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_tim3.h \
+main.pbi: F:\1workspace\stm8_lowpwr\stm8_lowpwr\user.h \
   F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_usart.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc/stm8l15x_clk.h \
-  F:\1workspace\stm8_lowpwr\stm8_lowpwr/user.h
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_tim3.h \
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_tim2.h \
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_syscfg.h \
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_rtc.h \
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_pwr.h \
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_gpio.h \
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_exti.h \
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_dma.h \
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_clk.h \
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x_adc.h \
+  F:\IAR_for_stm8\stm8\inc\c\intrinsics.h \
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\stm8l15x_conf.h \
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\STM8L15x_StdPeriph_Driver\inc\stm8l15x.h \
+  F:\1workspace\stm8_lowpwr\stm8_lowpwr\main.c

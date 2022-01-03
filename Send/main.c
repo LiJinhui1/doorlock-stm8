@@ -32,11 +32,12 @@ void TIM3_Config(void){
 void Bus_SendByte(uint8_t* sendbuf,uint8_t size){
   TIM3_DeInit(); //由于发送数据的时候这个管脚有电平变化，所以不能进入捕获中断，禁止TIM3
   GPIO_Init(SINGLEBUS_PORT,SINGLEBUS_PINS,GPIO_Mode_Out_PP_High_Slow);
-
+  GPIO_ResetBits(SINGLEBUS_PORT,SINGLEBUS_PINS);
+  Delay_40us(100);      //放在这里只会拉低一次4ms，后续可接连传输，用于给CC2530传数据
   for(uint8_t j=0;j!=size;j++)
   {
-    GPIO_ResetBits(SINGLEBUS_PORT,SINGLEBUS_PINS);
-    Delay_40us(100);      //拉低4ms
+    //GPIO_ResetBits(SINGLEBUS_PORT,SINGLEBUS_PINS);
+    //Delay_40us(100);      //拉低4ms,放在这里每8位都会拉低4ms，给STM8传数据
     for(uint8_t i=0; i!=8;++i)
     {
       if((*sendbuf>>i) & 1)       //如果当前位是1
@@ -56,7 +57,7 @@ void Bus_SendByte(uint8_t* sendbuf,uint8_t size){
     }
     sendbuf++;
     GPIO_SetBits(SINGLEBUS_PORT,SINGLEBUS_PINS);
-    Delay_40us(6);              //每个字节发送后要拉高240us，表示单字节发送结束
+    //Delay_40us(6);              //每个字节发送后要拉高240us，表示单字节发送结束
   }
   GPIO_Init(SINGLEBUS_PORT,SINGLEBUS_PINS, GPIO_Mode_In_PU_No_IT);
   GPIO_SetBits(SINGLEBUS_PORT,SINGLEBUS_PINS);
@@ -90,6 +91,7 @@ void main(void)
   uint8_t start =  0xB3;
   uint8_t other = 0xCC;
   uint8_t end = 0xB4;
+  //uint8_t act_doorlock[4]={0xC0,0x00,0x00,0x3F};
   bool flag =1;
   /*TXCode*/
   while (1)
@@ -97,7 +99,7 @@ void main(void)
     if(CLK_GetSYSCLKSource()== CLK_SYSCLKSource_HSE){              //如果时钟切换成功
       if(flag)
       {  
-         LED_ON;
+         /*LED_ON;
          Bus_SendByte(&start,1);
          Delay_40us(25000);
          LED_OFF;
@@ -106,7 +108,10 @@ void main(void)
          Delay_40us(12500);
          LED_ON;
          Bus_SendByte(&end,1);
-         flag&=0;
+         flag&=0;*/
+        LED_ON;
+        Bus_SendByte(&start,1);
+        flag&=0;
       }
       
     }

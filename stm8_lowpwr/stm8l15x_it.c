@@ -195,11 +195,12 @@ INTERRUPT_HANDLER(EXTI1_IRQHandler,9)
     */
   
   EXTI_DeInit();
-  
+  LED_ON;
   GPIO_Init(SINGLEBUS_PORT,SINGLEBUS_PINS,GPIO_Mode_In_FL_No_IT); 
-  TIM3_Config();
   ext_flag |=1;
   s_bus.pre_start |= 1;                         //预接收
+  TIM3_Config();
+  
   
   
   EXTI_ClearITPendingBit(EXTI_IT_Pin1);
@@ -354,7 +355,7 @@ INTERRUPT_HANDLER(TIM3_UPD_OVF_TRG_BRK_USART3_TX_IRQHandler,21)
       s_bus.pre_start &= 0;         //标志位清除
       s_bus.start_flag &= 0;
       TIM3->CCER1 |= TIM_CCER1_CC1P;      //修改当前为下降沿,
-      if(ext_flag){s_bus.pre_start|=1;ext_flag=0; TIM3->CCER1 &= (uint8_t)(~TIM_CCER1_CC1P);}
+      if(ext_flag){s_bus.pre_start|=1;ext_flag=0; TIM3->CCER1 &= (uint8_t)(~TIM_CCER1_CC1P);}   //如果是由EXTI进入的，那么设置上升沿触发
     }
   
   }
@@ -385,7 +386,7 @@ INTERRUPT_HANDLER(TIM3_CC_USART3_RX_IRQHandler,22)
       else if(s_bus.pre_start && s_bus.start_flag)        //状态2：当前是进入了传输过程
       {
         s_bus.high_time=TIM3_GetCapture1();     //取出捕获寄存器的值
-        if(s_bus.high_time>40 && s_bus.high_time<150)//判断当前的高电平时间是否正常,不正常就重置80  160
+        if(s_bus.high_time>40 && s_bus.high_time<170)//判断当前的高电平时间是否正常,不正常就重置80  160
         {
           TIM3->CCER1 &= (uint8_t)(~TIM_CCER1_CC1P);    //设置上升沿触发
           //并且入数据
@@ -407,7 +408,7 @@ INTERRUPT_HANDLER(TIM3_CC_USART3_RX_IRQHandler,22)
 
       if(s_bus.pre_start && (!s_bus.start_flag))              //A已经有下降沿但是这是第一个上升沿，就是等待4ms的时候来了一个上升沿
       {
-        if(s_bus.low_time< 3600 || s_bus.low_time>4400)                                            //a 如果当前的低电平时间小于3800us （大于4400就溢出了），溢出时标志位就全部置0
+        if(s_bus.low_time< 3500 || s_bus.low_time>4400)                                            //a 如果当前的低电平时间小于3800us （大于4400就溢出了），溢出时标志位就全部置0
         {
           s_bus.pre_start &=0;
           s_bus.start_flag &=0;
@@ -419,25 +420,27 @@ INTERRUPT_HANDLER(TIM3_CC_USART3_RX_IRQHandler,22)
       }
       else if(s_bus.start_flag && s_bus.pre_start)        //B判断当前状态  现在是进入传输过程了 
       {
-        if(s_bus.high_time<75 && s_bus.high_time>35&&s_bus.low_time<155 && s_bus.low_time>115)           //判断电平时间 一般在40-70 120-150
+        if(s_bus.high_time<80 && s_bus.high_time>30&&s_bus.low_time<160 && s_bus.low_time>110)           //判断电平时间 一般在40-70 120-150
         {
           rec_data[s_bus.datasum] &= (uint8_t)~(1<<s_bus.count);     //第count位变为0
           s_bus.count++;
           if(s_bus.count==8)
           {
-            if(rec_data[0]==CMD_START) s_bus.datasum=1;         //如果接收到了开始信号，那么就对rec_data[1]进行操作
+            //if(rec_data[0]==CMD_START) s_bus.datasum=1;         //如果接收到了开始信号，那么就对rec_data[1]进行操作
+            s_bus.datasum++;
             s_bus.count=0; 
             s_bus.pre_start&=0;
             s_bus.start_flag&=0;
           }   //当接收到开始数据时，后来的数据都存到下一个位置
         }
-        else if(s_bus.high_time>115 && s_bus.high_time<155 && s_bus.low_time<75 && s_bus.low_time>35)      //b高电平在140us以上，低电平在100us以下 入1
+        else if(s_bus.high_time>110 && s_bus.high_time<160 && s_bus.low_time<80 && s_bus.low_time>30)      //b高电平在140us以上，低电平在100us以下 入1
         {
           rec_data[s_bus.datasum] |= (uint8_t)1<<s_bus.count;        //第count位置1
           s_bus.count++;
           if(s_bus.count==8)
           {
-            if(rec_data[0]==CMD_START) s_bus.datasum=1;         //如果接收到了开始信号，那么就对rec_data[1]进行操作
+            //if(rec_data[0]==CMD_START) s_bus.datasum=1;         //如果接收到了开始信号，那么就对rec_data[1]进行操作
+            s_bus.datasum++;
             s_bus.count=0;
             s_bus.pre_start&=0;
             s_bus.start_flag&=0;

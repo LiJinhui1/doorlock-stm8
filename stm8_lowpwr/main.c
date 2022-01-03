@@ -5,7 +5,7 @@
 /*
 1、下降沿唤醒，拉低4ms，多字节发送时每字节间隔高电平240us，
 2、开始信号：0xB3,结束信号0xB4,
-3、实际接收到的电平：长电平120-150        短电平捕捉40-70
+3、实际接收到的电平：长电平        短电平捕捉
 4、测试时间：2021/11/20 多数据发送，多数据接收，单数据发送与接收，ADC转换传送，重复唤醒与传输ADC没问题，
 5、当已经激活发送的时候，由于是1s发送一次，所以发送结束标志的时候尽量在n.5s左右发送
 6、掉电唤醒必须把ultralow power关闭，因为比较电压需要VRef
@@ -27,10 +27,10 @@ static void Delay_40us(__IO uint16_t nCount){
   while(tick);
 }
 
-//TIM3配置并且开启，接收数据
+//TIM3配置并且开启，接收数据--TIM3捕获数据
 void TIM3_Config(void){
   CLK_PeripheralClockConfig(CLK_Peripheral_TIM3,ENABLE);
-  TIM3_TimeBaseInit(TIM3_Prescaler_16, TIM3_CounterMode_Up, PRESTART_EDGE);       //(4200)us进入溢出中断
+  TIM3_TimeBaseInit(TIM3_Prescaler_16, TIM3_CounterMode_Up, PRESTART_EDGE);       //(4400)us进入溢出中断
   if(ext_flag)
   TIM3_ICInit(TIM3_Channel_1,TIM3_ICPolarity_Rising,TIM3_ICSelection_DirectTI,TIM3_ICPSC_DIV1,0x00);   //配置捕获1通道，无分频，无滤波器
   else TIM3_ICInit(TIM3_Channel_1,TIM3_ICPolarity_Falling,TIM3_ICSelection_DirectTI,TIM3_ICPSC_DIV1,0x00);
@@ -92,10 +92,10 @@ static void RTC_Config(void){
 void Bus_SendByte(uint8_t* sendbuf,uint8_t size){
   TIM3_DeInit(); //由于发送数据的时候这个管脚有电平变化，所以不能进入捕获中断，禁止TIM3
   GPIO_Init(SINGLEBUS_PORT,SINGLEBUS_PINS,GPIO_Mode_Out_PP_High_Slow);
+  GPIO_ResetBits(SINGLEBUS_PORT,SINGLEBUS_PINS);
+  Delay_40us(100);      //拉低4ms
   for(uint8_t j=0;j!=size;j++)
   {
-    GPIO_ResetBits(SINGLEBUS_PORT,SINGLEBUS_PINS);
-    Delay_40us(100);      //拉低4ms
     for(uint8_t i=0; i!=8;++i)
     {
       if((*sendbuf>>i) & 1)       //如果当前位是1
@@ -115,7 +115,7 @@ void Bus_SendByte(uint8_t* sendbuf,uint8_t size){
     }
     sendbuf++;
     GPIO_SetBits(SINGLEBUS_PORT,SINGLEBUS_PINS);
-    Delay_40us(6);              //每个字节发送后要拉高240us,表示单字节发送结束
+    //Delay_40us(6);              //每个字节发送后要拉高240us,表示单字节发送结束
   }
   GPIO_SetBits(SINGLEBUS_PORT,SINGLEBUS_PINS);
   GPIO_Init(SINGLEBUS_PORT,SINGLEBUS_PINS, GPIO_Mode_In_PU_No_IT);
@@ -133,6 +133,7 @@ static double pow(double val,uint8_t n){
 
 void main(void)
 {
+  
   /*sysclock_config*/
   CLK_SYSCLKDivConfig(CLK_SYSCLKDiv_1);
   CLK_LSICmd(ENABLE);   //LSI开启后不能随意关闭
@@ -155,6 +156,10 @@ void main(void)
   GPIO_Init(DSET_PORT,DSET_PINS,GPIO_Mode_Out_PP_Low_Slow);//设置控制引脚为低电平，充电
   GPIO_Init(LOCATE_CTR_PORT,LOCATE_CTR_PINS,GPIO_Mode_Out_PP_Low_Slow); //根据外围电路设计，目前是低电平
   enableInterrupts();
+  //测试用，后面删除
+  uint8_t test[8]={0x02,0x3F,0x9D,0x88,0x6C,0x5A,0x42,0x31};
+
+ 
   while (1)
   {
     Delay_40us(25000);
@@ -170,7 +175,6 @@ void main(void)
     {
       LED_ON;
       MEASURE_ON;
-      while(PWR_GetFlagStatus(PWR_FLAG_VREFINTF)!=SET);//由于是快速唤醒，这里要确保Vrefintf建立好了
       ADC_Cmd(ADC1,ENABLE);
       DMA_GlobalCmd(ENABLE);
       ADC_SoftwareStartConv(ADC1);
@@ -197,7 +201,8 @@ void main(void)
         ADC_data[1] = (double)(-5.44e-08 *pow(temp,3)+1.55e-04 *pow(temp,2)-6.04e-03 *temp+0.6688);
         ADC_data[0] = (double)ADC_Val[1]*3.3/4.096;
         MEASURE_OFF;
-        Bus_SendByte((uint8_t*)ADC_data,8);
+        //Bus_SendByte((uint8_t*)ADC_data,8);
+        Bus_SendByte((uint8_t*)test,8);
         Delay_40us(25000);      //延时1s，可以在这1s内接收停止信号
       }
       MEASURE_OFF;      //收到结束信号

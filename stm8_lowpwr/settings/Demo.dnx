@@ -35,7 +35,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>3913474320</Checksum>
+        <Checksum>2666461671</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -49,7 +49,8 @@
         <Category>_ 0</Category>
     </Log_file>
     <watch_formats>
-        <Fmt0>{W}1:test_count	3	0</Fmt0>
+        <Fmt0>{W}1:test	0	9</Fmt0>
+        <Fmt1>{W}1:test_count	3	0</Fmt1>
     </watch_formats>
     <DataSample>
         <LogEnabled>0</LogEnabled>
@@ -66,7 +67,9 @@
         <Category>_ 0</Category>
     </LogFile>
     <Breakpoints>
-        <Count>0</Count>
+        <Bp0>_ "STD_CODE" "{$PROJ_DIR$\main.c}.192.7" 1 0 0 0 "" 0 ""</Bp0>
+        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\main.c}.32.3" 1 0 0 0 "" 0 ""</Bp1>
+        <Count>2</Count>
     </Breakpoints>
     <Aliases>
         <A0>_ "C:\Documents and Settings\Administrator\桌面\051\STM8L15x_StdPeriph_Driver\src\stm8l15x_gpio.c" ""</A0>

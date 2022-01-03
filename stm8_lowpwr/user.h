@@ -14,19 +14,25 @@
 #define DSET_PINS       GPIO_Pin_3
 #define LOCATE_CTR_PORT GPIOB
 #define LOCATE_CTR_PINS GPIO_Pin_4
+#define BAT_MEASURE_CTL_PORT    GPIOC
+#define BAT_MEASURE_CTL_PINS    GPIO_Pin_0
+#define BAT_MEASURE_ON      GPIO_SetBits(DSET_PORT,DSET_PINS)
+#define BAT_MEASURE_OFF     GPIO_ResetBits(DSET_PORT,DSET_PINS)
 #define MEASURE_ON      GPIO_SetBits(DSET_PORT,DSET_PINS)
 #define MEASURE_OFF     GPIO_ResetBits(DSET_PORT,DSET_PINS)
 #define PUTCHAR_PROTOTYPE int putchar (int c)
 #define LED_TOGGLE      GPIO_ToggleBits(LED_PORT,LED_PINS)
-#define LED_OFF         GPIO_SetBits(LED_PORT,LED_PINS)
-#define LED_ON          GPIO_ResetBits(LED_PORT,LED_PINS)
+#define LED_OFF         GPIO_ResetBits(LED_PORT,LED_PINS)
+#define LED_ON          GPIO_SetBits(LED_PORT,LED_PINS)
 #define MAX_DELAY       0xFFFFU
 #define SINGLEBUS_PORT       GPIOB
 #define SINGLEBUS_PINS       GPIO_Pin_1
+#define USER_KEY_PORT        GPIOB
+#define USER_KEY_PINS        GPIO_Pin_6   
 #define PRESTART_EDGE        0x112F     //溢出中断在(4399+1)us
 
 
-#define REC_MAXSIZE          2           //最大可以存10个字节
+#define REC_MAXSIZE          30           //最大可以存10个字节
 #define CMD_START            0xB3
 #define CMD_END              0xB4
 #define CMD_LWPWR_FLAG       0xB5
